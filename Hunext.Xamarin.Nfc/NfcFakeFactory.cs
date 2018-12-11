@@ -3,24 +3,24 @@ namespace Hunext.Xamarin.Nfc
 {
     public class NfcReaderFakeFactory : NfcReaderFactory
     {
-        private int _timeout;
-        private string _tagdata;
+        private int _delay;
+        private NfcTagFake _tag;
 
         public NfcReaderFakeFactory()
         {
-            _timeout = 2000;
+            _delay = 2000;
         }
 
-        public NfcReaderFakeFactory(int timeout, string tagdata)
+        public NfcReaderFakeFactory(int timeout, NfcTagFake tag)
         {
-            _timeout = timeout;
-            _tagdata = tagdata;
+            _delay = timeout;
+            _tag = tag;
         }
 
         public override INfcReader Create()
         {
-            if (_tagdata ==null) return new NfcReadeFake(_timeout);
-            else return new NfcReadeFake(_timeout,_tagdata);
+            if (_tag ==null) return new NfcReadeFake(_delay);
+            else return new NfcReadeFake(_delay,_tag);
 
         }
     }

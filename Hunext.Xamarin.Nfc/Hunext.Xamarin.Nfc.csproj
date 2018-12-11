@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Hunext.Xamarin.Nfc</PackageId>
-    <PackageVersion>1.1.2</PackageVersion>
+    <PackageVersion>1.1.4</PackageVersion>
     <Authors>Marco Bortolin</Authors>
     <Description>Hunext Xamarin Nfc library</Description>
-    <ReleaseVersion>1.1.2</ReleaseVersion>
+    <ReleaseVersion>1.1.4</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
 

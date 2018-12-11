@@ -7,18 +7,18 @@ namespace Hunext.Xamarin.Nfc
 {
     public class NfcReadeFake: INfcReader
     {
-        private int _timeout;
-        private string _tagdata;
+        private int _delay;
+        private NfcTagFake _tag;
 
         public NfcReadeFake(int timeout)
         {
-            _timeout = timeout;
+            _delay = timeout;
         }
 
-        public NfcReadeFake(int timeout, string tagdata)
+        public NfcReadeFake(int delay, NfcTagFake tag)
         {
-            _timeout = timeout;
-            _tagdata = tagdata;
+            _delay = delay;
+            _tag = tag;
         }
 
         public event TagDetectedDelegate TagDetected;
@@ -37,10 +37,10 @@ namespace Hunext.Xamarin.Nfc
         {
             Task.Run(() =>
             {
-                System.Threading.Thread.Sleep(_timeout);
+                System.Threading.Thread.Sleep(_delay);
 
-                if (_tagdata == null) TagDetected?.Invoke(new NfcTagFake());
-                else TagDetected?.Invoke(new NfcTagFake(_tagdata));
+                if (_tag == null) TagDetected?.Invoke(NfcTagFake.RandomTextRecord());
+                else TagDetected?.Invoke(_tag);
 
             });
 

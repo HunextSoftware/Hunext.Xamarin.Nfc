@@ -11,6 +11,5 @@ namespace Hunext.Xamarin.Nfc
         Task<bool> IsReaderEnabledAsync();
         Task StartReadingAsync();
         Task StopReadingAsync();
-
     }
 }

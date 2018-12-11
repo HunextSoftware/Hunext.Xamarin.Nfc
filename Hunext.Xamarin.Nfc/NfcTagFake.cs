@@ -1,33 +1,39 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Hunext.Xamarin.Nfc
 {
     public class NfcTagFake : INfcTag
     {
-        private string _recData;
-
-        public NfcTagFake()
+        public static NfcTagFake RandomTextRecord()
         {
-            _recData = System.Guid.NewGuid().ToString();
+            return new NfcTagFake(new NfcRecord[] { new NfcRecord() { TypeNameFormat = TagRecType.Empty, Payload = Encoding.UTF8.GetBytes("   " + System.Guid.NewGuid().ToString()) } });
         }
-        public NfcTagFake(string recData)
-        {
-            _recData = recData;
-        }
-        public bool IsWriteable => true;
 
-        public NfcRecord[] Records
+        public static NfcTagFake SingleTextRecord(string text)
         {
-            get
+            return new NfcTagFake(new NfcRecord[] { new NfcRecord() { TypeNameFormat = TagRecType.Empty, Payload = Encoding.UTF8.GetBytes("   " + text) } });
+        }
+
+        public static NfcTagFake MultipleTextRecord(string[] textList)
+        {
+            var records = new List<NfcRecord>();
+
+            foreach (var text in textList)
             {
-                return new NfcRecord[] {
-                                            new NfcRecord() {
-                                                                TypeNameFormat = TagRecType.Empty,
-                                                                Payload =  Encoding.UTF8.GetBytes("   " + _recData) }
-                                                                };
+                var rec = new NfcRecord() { TypeNameFormat = TagRecType.Empty, Payload = Encoding.UTF8.GetBytes("   " + text) };
+                records.Add(rec);
             }
-        }
-    }
 
+            return new NfcTagFake(records.ToArray());
+        }
+
+        public NfcTagFake(NfcRecord[] recData)
+        {
+            Records = recData;
+        }
+
+        public NfcRecord[] Records { get; }
+    }
 }

@@ -12,12 +12,12 @@ namespace Hunext.Xamarin.Nfc
 
         private static INfcReader CreateNfcReader()
         {
-            return DefaultNfcfactory.Create();
+            return Defaultfactory.Create();
         }
 
         public static INfcReader Current => _implementation.Value;
 
-        public static NfcReaderFactory DefaultNfcfactory { get; set; }
+        public static NfcReaderFactory Defaultfactory { get; set; }
 
         public static void Dispose()
         {
