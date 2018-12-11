@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Hunext.Xamarin.Nfc</PackageId>
+    <PackageVersion>1.1.2</PackageVersion>
+    <Authors>Marco Bortolin</Authors>
+    <Description>Hunext Xamarin Nfc library</Description>
+    <ReleaseVersion>1.1.2</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="Hunext.Xamarin.Nfc.1.0.0.nupkg" />
+  </ItemGroup>
+</Project>

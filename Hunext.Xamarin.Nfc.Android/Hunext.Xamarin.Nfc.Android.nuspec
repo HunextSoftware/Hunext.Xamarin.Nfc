@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$authors$</authors>
+   
+    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    
+    <copyright>Copyright Hunext Software 2018</copyright>
+    
+            <dependencies>
+   
+        <dependency id="Hunext.Xamarin.Nfc" version="1.0.0" />
+    
+</dependencies>
+        
+  </metadata>
+    
+
+  
+</package>
