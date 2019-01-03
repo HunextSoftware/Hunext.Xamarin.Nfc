@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Hunext.Xamarin.Nfc.Example" x:Class="Hunext.Xamarin.Nfc.Example.MainPage">
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="StatusNfc" Text="Tag Reading" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Button Text="Read" Clicked="Handle_Clicked" HeightRequest="60" BackgroundColor="Gray"/>
+    </StackLayout>
+</ContentPage>
