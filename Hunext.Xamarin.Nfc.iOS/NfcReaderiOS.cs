@@ -10,7 +10,7 @@ using Foundation;
 namespace Hunext.Xamarin.Nfc.iOS
 {
 
-    public class NfcReaderiOS : NSObject, INFCNdefReaderSessionDelegate, INfcReader
+    public class NfcReaderiOS :  NFCNdefReaderSessionDelegate, INfcReader
     {
         private NFCNdefReaderSession _session;
         private TaskCompletionSource<NfcTag> _tcs;
@@ -36,12 +36,13 @@ namespace Hunext.Xamarin.Nfc.iOS
             return _tcs.Task;
         }
 
-        public void DidInvalidate(NFCNdefReaderSession session, NSError error)
+        
+        public override void DidInvalidate(NFCNdefReaderSession session, NSError error)
         {
             _tcs.TrySetException(new Exception(error?.LocalizedFailureReason));
         }
 
-        public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
+        public override void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
         {
 
             var message = messages.FirstOrDefault();

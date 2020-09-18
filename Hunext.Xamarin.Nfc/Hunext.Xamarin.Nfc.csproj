@@ -6,8 +6,7 @@
     <PackageVersion>1.1.4</PackageVersion>
     <Authors>Marco Bortolin</Authors>
     <Description>Hunext Xamarin Nfc library</Description>
-    <ReleaseVersion>1.1.4</ReleaseVersion>
-    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <ReleaseVersion>1.2.1</ReleaseVersion>
   </PropertyGroup>
 
 

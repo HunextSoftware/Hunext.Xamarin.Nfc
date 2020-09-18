@@ -13,6 +13,7 @@
     <PackageVersion>1.1.3</PackageVersion>
     <Authors>Marco Bortolin</Authors>
     <Description>Hunext Xamarin Nfc Library for iOS</Description>
+    <ReleaseVersion>1.2.1</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -71,4 +72,5 @@
     <None Include="Hunext.Xamarin.Nfc.iOS.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+
 </Project>

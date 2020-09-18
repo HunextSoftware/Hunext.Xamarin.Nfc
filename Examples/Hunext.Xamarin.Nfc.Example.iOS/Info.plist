@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Privacy — NFC Scan Usage Description</key>
-	<string>NFC tag to read NDEF messages into the application</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>nfc</string>
+	</array>
+	<key>NFCReaderUsageDescription</key>
+	<string>NFC Reading</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -23,7 +27,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>11.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>Hunext.Xamarin.Nfc.Example</string>
 	<key>CFBundleIdentifier</key>

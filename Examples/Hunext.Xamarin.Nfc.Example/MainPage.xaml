@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Hunext.Xamarin.Nfc.Example" x:Class="Hunext.Xamarin.Nfc.Example.MainPage">
     <StackLayout>
         <!-- Place new controls here -->
-        <Label x:Name="StatusNfc" Text="Tag Reading" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="StatusNfc" Text="Tag Reading" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black"/>
         <Button Text="Read" Clicked="Handle_Clicked" HeightRequest="60" BackgroundColor="Gray"/>
     </StackLayout>
 </ContentPage>

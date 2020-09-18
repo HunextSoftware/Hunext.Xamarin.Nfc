@@ -13,10 +13,7 @@ namespace Hunext.Xamarin.Nfc.Example
         {
             InitializeComponent();
 
-
             NfcReader.Current.TagDetected += Current_TagDetected;;
-
-
         }
 
         protected override async void OnAppearing()
@@ -34,8 +31,6 @@ namespace Hunext.Xamarin.Nfc.Example
                 StatusNfc.Text = "NFC Reader not enabled. Please turn it on in the settings.";
                 return;
             }
-
-
         }
 
         async void Handle_Clicked(object sender, System.EventArgs e)
@@ -45,10 +40,7 @@ namespace Hunext.Xamarin.Nfc.Example
 
         async void Current_TagDetected(INfcTag tag)
         {
-
-
             StatusNfc.Text = System.Text.Encoding.UTF8.GetString(tag.Records[0].Payload);
-
             await NfcReader.Current.StopReadingAsync();
         }
 
